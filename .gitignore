@@ -78,6 +78,12 @@ python/gjc-rpc/src/gjc_rpc.egg-info/
 .wt/
 CPU*.md
 packages/coding-agent/binaries/
+/deploy/airgap-windows-installer/payload/
+/deploy/airgap-windows-installer/artifacts/
+/deploy/airgap-windows-installer/staging/
+/deploy/airgap-windows-installer/bin/
+/deploy/airgap-windows-installer/obj/
+/deploy/LOCAL_DEPLOYMENT.md
 
 # robogjc runtime state
 python/robogjc/data/
