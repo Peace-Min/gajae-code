@@ -26,6 +26,7 @@ validated WSL2/tmux environment for live team mode.
 - Added WSL2 feature enablement, reboot continuation, offline distro import,
   Linux GJC configuration, tmux verification, and desktop launchers.
 - Added a GitHub Actions workflow that builds the tmux-ready WSL rootfs.
+- Added a disposable AGENTS-driven verification project and HTML/JSON report.
 - Downloaded and verified official v0.5.0 Windows and Linux GJC binaries into
   the ignored local staging directory.
 - Added the overall deployment plan.
@@ -41,19 +42,13 @@ validated WSL2/tmux environment for live team mode.
 
 ## Remaining implementation
 
-1. Add the disposable verification project template.
-2. Add deterministic offline/security/tool-call/workflow checks.
-3. Generate sanitized JSON evidence and a self-contained HTML report.
-4. Add concurrency benchmarks for levels 1 through 4.
-5. Persist the selected `task.maxConcurrency`; start with 2 and cap the first
+1. Add concurrency benchmarks for levels 1 through 4.
+2. Persist the selected `task.maxConcurrency`; start with 2 and cap the first
    production rollout at 2.
-6. Run the rootfs workflow in the personal public repository and download its
-   artifact.
-7. Build the final single EXE with all four payloads.
-8. Validate tmux session launch. Live team mode remains out of current scope.
-9. Test clean install, reinstall, partial failure, rollback, and reboot resume
+3. Validate tmux session launch. Live team mode remains out of current scope.
+4. Test clean install, reinstall, partial failure, rollback, and reboot resume
    on Windows 10 Pro 19045.
-10. Produce the final signed EXE, checksum, build metadata, licenses, and
+5. Produce the final signed EXE, checksum, build metadata, licenses, and
    immutable internal Git release.
 
 ## Diagnostic contract

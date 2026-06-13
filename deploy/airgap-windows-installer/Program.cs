@@ -260,6 +260,18 @@ internal sealed class InstallerForm : Form
                 }
             }
 
+            SetStage("verification", "running");
+            var verifier = new VerificationRunner(Log);
+            var verification = await verifier.RunAsync(
+                paths.BinaryPath,
+                _deployment,
+                _installWslTmux.Checked);
+            if (verification.Status == "failed")
+            {
+                throw new InvalidOperationException(
+                    "설치는 완료됐지만 자동 검증에 실패했습니다. 바탕화면 HTML 보고서와 진단 로그를 확인하십시오.");
+            }
+
             SetStage("complete", "succeeded");
             Log("설치가 완료되었습니다. 새 터미널에서 gjc를 실행하십시오.");
             MessageBox.Show(this, "가재코드 설치와 서버 연결 설정이 완료되었습니다.",

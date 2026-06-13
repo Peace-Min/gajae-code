@@ -76,7 +76,7 @@ committed.
 4. add the install directory to the user `PATH`.
 5. Store the key in the user environment as `GJC_INTERNAL_API_KEY`.
 6. Back up existing GJC model and runtime configuration.
-7. Configure the internal provider and map all roles to `qwen3.6-27b`.
+7. Configure the internal provider and map all roles to the build-time model.
 8. Disable update checks, marketplace updates, star reminders, web search,
    and browser tools.
 9. Detect and configure the existing Git Bash installation. Fail with a

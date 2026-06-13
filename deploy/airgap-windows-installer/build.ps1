@@ -26,10 +26,14 @@ param(
 
     [string]$ProviderId = "internal-anthropic",
 
-    [string]$OutputDirectory = (Join-Path $PSScriptRoot "artifacts")
+    [string]$OutputDirectory
 )
 
 $ErrorActionPreference = "Stop"
+
+if ([string]::IsNullOrWhiteSpace($OutputDirectory)) {
+    $OutputDirectory = Join-Path $PSScriptRoot "artifacts"
+}
 
 $projectPath = Join-Path $PSScriptRoot "GajaeCode.AirgapInstaller.csproj"
 $payloadDirectory = Join-Path $PSScriptRoot "payload"

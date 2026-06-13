@@ -55,6 +55,17 @@ The installer:
 8. enables WSL2 and resumes after reboot when required;
 9. imports a tmux-ready offline Linux root filesystem;
 10. installs Linux GJC and creates a `GajaeCode tmux` desktop launcher.
+11. creates a disposable verification project and runs a real agent edit/test
+    workflow;
+12. writes a sanitized JSON evidence file and self-contained HTML report.
+
+Verification outputs:
+
+```text
+%USERPROFILE%\GajaeCode-Verification
+%USERPROFILE%\.gjc\verification\latest.json
+%USERPROFILE%\Desktop\GajaeCode-Installation-Report.html
+```
 
 Existing `models.yml` and `config.yml` files are timestamp-backed up before
 the managed configuration is written.
